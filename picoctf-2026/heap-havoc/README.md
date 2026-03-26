@@ -1,4 +1,5 @@
 ## heap havoc
+medium difficulty / binary exploitation / picoCTF 2026
 "A seemingly harmless program takes two names as arguments, but there’s a catch. By overflowing the input buffer, you can overwrite the saved return address and redirect execution to a hidden part of the binary that prints the flag."
 
 Starting with checking the binary with `file` and enabled security features
