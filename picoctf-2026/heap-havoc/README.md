@@ -1,5 +1,4 @@
 ## heap havoc
----
 "A seemingly harmless program takes two names as arguments, but there’s a catch. By overflowing the input buffer, you can overwrite the saved return address and redirect execution to a hidden part of the binary that prints the flag."
 
 Starting with checking the binary with `file` and enabled security features
@@ -20,9 +19,8 @@ RelRO                         : Partial
 ```
 No significant security features are noticed here, meaning any addresses we find in the binary while statically analyzing it will remain the same.
 
-
-## Approach
 ---
+## Approach
 
 Let's see what immediate vulnerabilities are apparent in the source code.
 ```
@@ -261,8 +259,8 @@ No winners this time, try again!
 
 and so our exploit finally worked!
 
-## Solution
 ---
+## Solution
 ```
 from pwn import *
 
